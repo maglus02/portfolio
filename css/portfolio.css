@@ -1,0 +1,151 @@
+div.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+div.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+h1.main {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0px;
+}
+
+div.sub {
+    font-size: 1.6rem;
+    opacity: 0.7;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+div.title,
+div.projects-section {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+div.projects-section {
+    margin-top: 30px;
+}
+
+div.projects-sub {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+div.projects {
+    display: flex;
+    flex-direction: column;
+    max-width: 1020px;
+    row-gap: 40px;
+}
+
+div.projects div.project {
+    border-radius: 9px;
+    background-color: var(--box-bg);
+    width: 100%;
+}
+
+div.projects div.project img {
+    width: 100%;
+    border-radius: 9px 9px 0px 0px;
+}
+
+div.projects div.project h2 {
+    font-size: 1.6rem;
+}
+
+div.projects div.project p {
+    font-size: 1.1rem;
+}
+
+div.projects div.project h2,
+div.projects div.project p {
+    margin-left: 10px;
+}
+
+div.projects div.project div.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.projects div.project div.links a {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: var(--primary);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--secondary);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div.projects div.project div.links a:hover {
+    filter: brightness(0.95);
+}
+
+div.projects div.project div.links a:nth-child(1) {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+div.projects div.project div.links a:nth-child(2) {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+div.contact {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 10px;
+}
+
+div.contact span {
+    color: rgb(255, 0, 0);
+}
+
+div.contact a {
+    color: #ffc83d;
+    text-decoration: none;
+}
+
+div.contact a:hover {
+    text-decoration: underline;
+}
+
+div.projects div.project div.links a,
+h1.main {
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 1000px) {
+    h1.main {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    h1.main span {
+        display: none;
+    }
+}
