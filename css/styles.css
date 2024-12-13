@@ -1,16 +1,22 @@
-html {
-    /*Colors*/
+:root {
+    /* Colors */
     --primary: #ffffff;
-    --bg: #131313;
-    --box-bg: #2b2b2b;
-    --secondary: #000;
-    --contact: #000000c7;
+    --color: #cccccc;
+    --bg: #121212;
+    --box-bg: #1e1e1e;
+    --btn-bg: #007bff;
+    --btn-hover-bg: #0056b3;
+    --secondary: #ffffff;
+    --contact: #cccccc;
+    --border: #333333;
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
 body {
     background-color: var(--bg);
     font-family: 'Jost', sans-serif;
-    color: var(--primary);
-    width: 100%;
+    color: var(--color);
     margin: 0;
+    width: 100%;
+    line-height: 1.6;
 }

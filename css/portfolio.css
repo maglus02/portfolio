@@ -3,11 +3,12 @@ div.center {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: 10%;
+    transform: translateY(10%);
     width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
 div.title {
@@ -16,116 +17,123 @@ div.title {
     align-items: center;
     justify-content: center;
     row-gap: 10px;
+    margin-bottom: 40px;
 }
 
 h1.main {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin: 0px;
+    color: var(--primary);
+    text-shadow: 2px 2px 5px var(--shadow);
+    margin: 0;
 }
 
 div.sub {
-    font-size: 1.6rem;
-    opacity: 0.7;
-    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    opacity: 0.8;
+    letter-spacing: 0.05rem;
     text-align: center;
-}
-
-div.title,
-div.projects-section {
-    margin-left: 20px;
-    margin-right: 20px;
+    color: var(--contact);
 }
 
 div.projects-section {
-    margin-top: 30px;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 div.projects-sub {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    color: var(--primary);
 }
 
 div.projects {
-    display: flex;
-    flex-direction: column;
-    max-width: 1020px;
-    row-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 div.projects div.project {
-    border-radius: 9px;
+    border-radius: 12px;
     background-color: var(--box-bg);
-    width: 100%;
+    box-shadow: 0 4px 6px var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 400px;
+}
+
+div.projects div.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow);
 }
 
 div.projects div.project img {
     width: 100%;
-    border-radius: 9px 9px 0px 0px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border-bottom: 1px solid var(--border);
 }
 
 div.projects div.project h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 15px;
 }
 
 div.projects div.project p {
-    font-size: 1.1rem;
-}
-
-div.projects div.project h2,
-div.projects div.project p {
-    margin-left: 10px;
+    margin: 15px;
+    color: var(--color);
+    flex-grow: 1;
 }
 
 div.projects div.project div.links {
-    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: var(--box-bg);
+    border-top: 1px solid var(--border);
 }
 
 div.projects div.project div.links a {
-    width: 100%;
-    cursor: pointer;
-    padding: 10px 15px;
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px 20px;
     border-radius: 8px;
-    background-color: var(--primary);
+    text-align: center;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     color: var(--secondary);
-    margin-bottom: 10px;
-    text-align: center;
+    background-color: var(--btn-bg);
+    transition: background-color 0.3s;
 }
 
 div.projects div.project div.links a:hover {
-    filter: brightness(0.95);
-}
-
-div.projects div.project div.links a:nth-child(1) {
-    margin-left: 10px;
-    margin-right: 5px;
-}
-
-div.projects div.project div.links a:nth-child(2) {
-    margin-left: 5px;
-    margin-right: 10px;
+    background-color: var(--btn-hover-bg);
 }
 
 div.contact {
     margin-top: 40px;
-    margin-bottom: 60px;
-    padding: 10px;
+    padding: 20px;
+    font-size: 1rem;
+    color: var(--contact);
 }
 
 div.contact span {
-    color: rgb(255, 0, 0);
+    color: #e60023;
 }
 
 div.contact a {
-    color: #ffc83d;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -133,19 +141,12 @@ div.contact a:hover {
     text-decoration: underline;
 }
 
-div.projects div.project div.links a,
-h1.main {
-    transition: 0.2s;
-}
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
     h1.main {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
-}
 
-@media only screen and (max-width: 520px) {
-    h1.main span {
-        display: none;
+    div.projects {
+        grid-template-columns: 1fr;
     }
 }
